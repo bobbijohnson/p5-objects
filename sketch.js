@@ -27,29 +27,37 @@ function Pacman(x,y){
                     this.y -= 5;
                     this.rotation = 270;
                 }
+                
                 if(keyIsDown(DOWN_ARROW)){
                     this.y += 5;
                     this.rotation = 90;
                 }
+                
                 if(keyIsDown(RIGHT_ARROW)){
                     this.x += 5;
                     this.rotation = 0;
                 }
+                
                 if(keyIsDown(LEFT_ARROW)){
                     this.x -= 5;
                     this.rotation = 180;
                 }
+                
         };
+        
         this.boundary = function(){
                 if(this.x > width){
                         this.x = 0;
                 }
+                
                 if(this.x < 0){
                         this.x = width;
                 }
+                
                 if(this.y > height){
                         this.y = 0;
                 }
+                
                 if(this.y < 0){
                         this.y = height;
                 }
